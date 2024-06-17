@@ -40,7 +40,7 @@ Check below on how to define them.
 
 In server environment variables, you can store secret values (e.g. secret API keys) since they are not publicly readable. You can define them without any special prefix, such as `SOME_VAR_NAME=...`.
 
-You can read them from the server code like this:
+You can read the env vars from server code like this:
 <Tabs groupId="js-ts">
 <TabItem value="js" label="JavaScript">
 
