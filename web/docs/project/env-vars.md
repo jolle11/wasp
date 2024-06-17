@@ -114,9 +114,9 @@ You should provide them to the build command that turns client code into static 
 REACT_APP_SOME_VAR_NAME=somevalue REACT_APP_SOME_OTHER_VAR_NAME=someothervalue npm run build
 ```
 
-Notice that the exact moment when you should provide these env vars is during the `npm run build` command that you execute from `.wasp/build/web-app/` after you have ran `wasp build`. Check [deployment docs](../advanced/deployment/manually#3-deploying-the-web-client-frontend) for more details.
+Check the [deployment docs](../advanced/deployment/manually#3-deploying-the-web-client-frontend) for more details.
 
-Also, notice that you can't and shouldn't provide env vars to the client code by setting them on the hosting provider where you deployed them (unlike server env vars, where this is how we do it). Your client code will ignore those, as at that point client code is just static files.
+Also, notice that you can't and shouldn't provide env vars to the client code by setting them on the hosting provider where you deployed them (unlike server env vars, where this is how you should do it). Your client code will ignore those, as at that point client code is just static files.
 
 :::info How it works
 What happens behind the scenes is that Wasp will replace all occurrences of `import.meta.env.REACT_APP_SOME_VAR_NAME` in your client code with the env var value you provided. This is done during the build process, so the value is embedded into the static files produced from the client code.
@@ -126,7 +126,7 @@ Read more about it in Vite's [docs](https://vitejs.dev/guide/env-and-mode.html#p
 
 ### Server Env Vars
 
-To provide env vars to your server code in production you will need to have them defined and available on the server where your server code is running.
+You can provide env vars to your server code in production by defining them and making them available on the server where your server code is running.
 
 Setting this up will highly depend on where you are deploying your Wasp project, but in general it comes down to defining the env vars via mechanisms that your hosting provider provides.
 

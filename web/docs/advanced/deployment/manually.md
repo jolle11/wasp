@@ -96,7 +96,7 @@ While these are the general instructions on deploying the server anywhere, we al
 
 The command above will build the web client and put it in the `build/` directory in the `web-app` directory.
 
-This is also the moment to provide any additional env vars for the client code, next to `REACT_APP_API_URL`. Check [env vars docs](../../project/env-vars#client-env-vars-1) for more details.
+This is also the moment to provide any additional env vars for the client code, next to `REACT_APP_API_URL`. Check the [env vars docs](../../project/env-vars#client-env-vars-1) for more details.
 
 Since the app's frontend is just a bunch of static files, you can deploy it to any static hosting provider.
 
