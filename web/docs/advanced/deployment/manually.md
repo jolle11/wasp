@@ -180,7 +180,7 @@ Next, let's copy the `fly.toml` file up to our Wasp project dir for safekeeping.
 cp fly.toml ../../
 ```
 
-Next, let's add a few more environment variables that will be available to the server code:
+Next, add a few more environment variables for the server code.
 
 ```bash
 flyctl secrets set PORT=8080
